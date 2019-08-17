@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.*;
 public class Liczby_pierwsze {
-    public static void Liczby_pierwsze() {
+    public static void liczby_pierwsze() {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int[] liczby = new int[n];

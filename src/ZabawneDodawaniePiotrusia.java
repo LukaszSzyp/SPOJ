@@ -5,7 +5,7 @@ public class ZabawneDodawaniePiotrusia {
     public static void zabawneDodawaniePiotrusia() {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-        int[][] wynik = new int[n][2];
+        int[][] wynik = new int[n][2]; // 2-dimensional array
         int ileOperacji = 0;
         for (int i = 0; i < n; i++) {
             wynik[i][0] = scan.nextInt();

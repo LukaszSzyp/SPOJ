@@ -27,7 +27,7 @@ public class ZabawneDodawaniePiotrusia {
             }
         }
         for (int i = 0; i < n; i++) {
-            System.out.println(wynik[i][0] + " " + wynik[i][1]);
+            System.out.println(wynik[i][0] + " " + wynik[i][1]); // Print array
         }
     }
 }

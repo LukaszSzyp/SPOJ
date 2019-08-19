@@ -9,7 +9,7 @@ public class DwieCyfrySilni {
             liczby[i] = scan.nextInt();
         }
         for (int i = 0; i < n; i++) {
-            if ((liczby[i] > 1) && (liczby[i] <10)) {
+            if ((liczby[i] > 1) && (liczby[i] < 10)) {
                 int dzie = 0;
                 int jed = 0;
                 int silnia = 1;
@@ -18,12 +18,12 @@ public class DwieCyfrySilni {
                 }
                 dzie = silnia / 10;
                 jed = silnia - dzie * 10;
-                dzie = dzie%10;
+                dzie = dzie % 10;
                 System.out.println(dzie + " " + jed);
-            } else if (liczby[i] == 1) {
-                System.out.print(0 + " " + 1);
+            } else if (liczby[i] == 1 || liczby[i] == 0) {
+                System.out.println(0 + " " + 1);
             } else {
-                System.out.print(0 + " " + 0);
+                System.out.println(0 + " " + 0);
             }
         }
     }

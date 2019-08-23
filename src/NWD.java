@@ -4,14 +4,13 @@ import java.lang.*;
 
 public class NWD {
     public static int nwd ( int a, int b){
-        int wynik = 0;
-        int reszta = a % b;
-        wynik = b;
-        while (reszta != 0) {
-            wynik = reszta;
-            reszta = b % reszta;
+        int reszta;
+        while (b != 0) {
+            reszta = a % b;
+            a = b;
+            b = reszta;
         }
-        return wynik;
+        return a;
     }
     public static void main(String[] arg) throws java.lang.Exception {
     BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));

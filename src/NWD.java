@@ -3,26 +3,29 @@ import java.io.InputStreamReader;
 import java.lang.*;
 
 public class NWD {
-    public static void main(String[] arg) throws java.lang.Exception {
-
-        BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
-        int iloscOperacji = Integer.valueOf(scan.readLine());
-        int[] wynik = new int[iloscOperacji];
-        for (int i = 0; i < iloscOperacji; i++) {
-            int a = 0;
-            int b = 0;
-            String[] dane = scan.readLine().split(" ");
-            a = Integer.valueOf(dane[0]);
-            b = Integer.valueOf(dane[1]);
-            int reszta = a % b;
-            wynik[i] = b;
-            while (reszta != 0) {
-                wynik[i] = reszta;
-                reszta = b % reszta;
-            }
+    public static int nwd ( int a, int b){
+        int wynik = 0;
+        int reszta = a % b;
+        wynik = b;
+        while (reszta != 0) {
+            wynik = reszta;
+            reszta = b % reszta;
         }
-        for (int i : wynik) {
+        return wynik;
+    }
+    public static void main(String[] arg) throws java.lang.Exception {
+    BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));
+    int n = Integer.valueOf(bR.readLine());
+    int[] wynik = new int[n];
+        for (int i = 0; i <n ; i++) {
+            String[] dane = bR.readLine().split(" ");
+            wynik[i]=nwd(Integer.valueOf(dane[0]),Integer.valueOf(dane[1]));
+        }
+        for (int i: wynik) {
             System.out.println(i);
         }
     }
+
+
+
 }

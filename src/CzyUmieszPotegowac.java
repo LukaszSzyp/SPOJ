@@ -18,6 +18,9 @@ public class CzyUmieszPotegowac {
             b = Integer.valueOf(dane[1]);
             a = a % 10;
             b = b % 4 - 1;
+            if (b<0){
+                b=3;
+            }
             wynik[i] = cyfry[a][b];
         }
         for (int i : wynik) {

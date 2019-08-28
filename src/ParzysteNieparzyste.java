@@ -7,15 +7,15 @@ public class ParzysteNieparzyste {
         int n = Integer.valueOf(bR.readLine());
         String[] wynik = new String[n];
         for (int i = 0; i < n; i++) {
-            int iloscLiczb = Integer.valueOf(bR.readLine());
+           // int iloscLiczb = Integer.valueOf(bR.readLine());
             String parzyste = "";
             String nieparzyste = "";
             String[] dane = bR.readLine().split(" ");
-            for (int j = 0; j < dane.length; j++) {
-                if (j % 2 != 0) {
-                    parzyste += j + " ";
+            for (int j = 1; j <= Integer.valueOf(dane[0]); j++) {
+                if (j % 2 == 0) {
+                    parzyste += dane[j] + " ";
                 } else {
-                    nieparzyste += j + " ";
+                    nieparzyste += dane[j] + " ";
                 }
             }
             wynik[i]=parzyste + nieparzyste;

@@ -20,7 +20,7 @@ public class ParzysteNieparzyste {
             }
             wynik[i]=parzyste + nieparzyste;
         }
-        for (String i: wynik) {
+       for (String i: wynik) {
             System.out.println(i);
         }
     }

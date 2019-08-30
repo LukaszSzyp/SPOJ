@@ -6,26 +6,29 @@ public class Kalkulator {
         BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));
         String[] dane = new String[3];
         int i = 0;
-        while (i < 100) {
+        String wynik = "";
+        while (i < 3) {
             dane = bR.readLine().split(" ");
             switch (dane[0]) {
                 case "+":
-                    System.out.println(Integer.valueOf(dane[1]) + Integer.valueOf(dane[2]));
+                    wynik += String.valueOf(Integer.valueOf(dane[1]) + Integer.valueOf(dane[2]));
                     break;
                 case "-":
-                    System.out.println(Integer.valueOf(dane[1]) - Integer.valueOf(dane[2]));
+                    wynik += String.valueOf(Integer.valueOf(dane[1]) - Integer.valueOf(dane[2]));
                     break;
                 case "*":
-                    System.out.println(Integer.valueOf(dane[1]) * Integer.valueOf(dane[2]));
+                    wynik += String.valueOf(Integer.valueOf(dane[1]) * Integer.valueOf(dane[2]));
                     break;
                 case "/":
-                    System.out.println(Integer.valueOf(dane[1]) / Integer.valueOf(dane[2]));
+                    wynik += String.valueOf(Integer.valueOf(dane[1]) / Integer.valueOf(dane[2]));
                     break;
                 case "%":
-                    System.out.println(Integer.valueOf(dane[1]) % Integer.valueOf(dane[2]));
+                    wynik += String.valueOf(Integer.valueOf(dane[1]) % Integer.valueOf(dane[2]));
                     break;
             }
             i++;
+            wynik += "\n";
         }
+        System.out.println(wynik.trim());
     }
 }
